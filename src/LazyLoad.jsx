@@ -4,6 +4,7 @@ import { findDOMNode } from 'react-dom';
 import { add, remove } from 'eventlistener';
 import debounce from 'lodash.debounce';
 import throttle from 'lodash.throttle';
+import shallowCompare from 'react-addons-shallow-compare';
 import parentScroll from './utils/parentScroll';
 import inViewport from './utils/inViewport';
 
@@ -45,7 +46,7 @@ export default class LazyLoad extends Component {
   }
 
   shouldComponentUpdate(_nextProps, nextState) {
-    return nextState.visible;
+    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
