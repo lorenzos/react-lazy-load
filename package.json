@@ -10,7 +10,7 @@
     "build:umd:min": "webpack src/LazyLoad.jsx dist/LazyLoad.min.js --config webpack.config.production.js",
     "clean": "rimraf lib dist",
     "lint": "eslint src/LazyLoad.jsx",
-    "prepublish": "npm run clean && npm run build",
+    "prepare": "npm run clean && npm run build",
     "test": "jest"
   },
   "repository": {
