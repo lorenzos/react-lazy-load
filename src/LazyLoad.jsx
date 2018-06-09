@@ -46,7 +46,7 @@ export default class LazyLoad extends Component {
   }
 
   shouldComponentUpdate(_nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
+    return shallowCompare(this, _nextProps, nextState);
   }
 
   componentWillUnmount() {
